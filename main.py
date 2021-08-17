@@ -15,7 +15,7 @@ def main():
     app = Flask(__name__)
     auth = HTTPBasicAuth()
 
-    @app.route('/speedtest', methods=['GET'])
+    @app.route('/', methods=['GET'])
     @auth.login_required
     def start():
         s = speedtest.Speedtest()
